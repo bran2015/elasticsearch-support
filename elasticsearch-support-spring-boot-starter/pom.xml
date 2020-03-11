@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>elasticsarch-support-spring-boot-starter</artifactId>
+    <artifactId>elasticsearch-support-spring-boot-starter</artifactId>
 
     <dependencies>
 

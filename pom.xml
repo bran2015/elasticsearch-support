@@ -10,9 +10,9 @@
     <version>1.0.0</version>
     <modules>
         <module>elasticsearch-core</module>
-        <module>elasticsarch-support-spring-boot-starter</module>
+        <module>elasticsearch-support-spring-boot-starter</module>
         <module>elasticsearch-support-springboot-autoconfigure</module>
         <module>elasticsearch-spring</module>
     </modules>
-    
+
 </project>
