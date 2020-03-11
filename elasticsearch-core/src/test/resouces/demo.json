@@ -1,0 +1,27 @@
+{
+  "settings": {
+    "index": {
+      "number_of_shards": "5",
+      "number_of_replicas": "1"
+    }
+  },
+  "mappings": {
+    "demo": {
+      "properties": {
+        "name": {
+          "type": "text",
+          "fields": {
+            "english": {
+              "type": "text",
+              "analyzer": "english"
+            },
+            "ik_max_word": {
+              "type": "text",
+              "analyzer": "ik_max_word"
+            }
+          }
+        }
+      }
+    }
+  }
+}
