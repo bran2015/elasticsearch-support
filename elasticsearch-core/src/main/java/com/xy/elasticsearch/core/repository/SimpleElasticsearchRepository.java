@@ -7,7 +7,7 @@ import org.elasticsearch.client.RestHighLevelClient;
  * @version 1.0.0
  * @date 2020/1/9 14:36
  */
-public class SimpleElasticsearchRepository<T> extends AbstractElasticsearchRepository<T> implements ElasticsearchRepository<T> {
+public class SimpleElasticsearchRepository<T> extends AbstractElasticsearchRepository<T>  {
 
 
     public SimpleElasticsearchRepository(Class<T> tClass, RestHighLevelClient client) {

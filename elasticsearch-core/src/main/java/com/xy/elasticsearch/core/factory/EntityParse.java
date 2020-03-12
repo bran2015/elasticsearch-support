@@ -29,5 +29,10 @@ public interface EntityParse {
     Settings settingParse();
 
 
+    /**
+     * 获取解析类的信息
+     * @param clazz clazz
+     * @return IndexEndurance
+     */
     IndexEndurance getIndexEndurance(Class clazz);
 }

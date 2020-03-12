@@ -1,8 +1,7 @@
 package com.xy.elasticsearch.core.repository;
 
 import com.xy.elasticsearch.core.factory.EntityParse;
-
-import java.io.IOException;
+import com.xy.elasticsearch.core.parse.IndexPattern;
 
 /**
  * @author zoubo
@@ -27,15 +26,39 @@ public interface ElasticsearchIndexRepository<T> {
      */
     void createIndex(Class<T> tClass);
 
+    /**
+     * 创建索引库
+     * @see IndexPattern#INDEX_FIELD_SET_UP 该模式下创建索引的方式
+     * @param entityParse entityParse
+     */
+    void pathCreateIndex(EntityParse entityParse) ;
 
-    void pathCreateIndex(EntityParse entityParse) throws IOException;
+    /**
+     * 创建索引库
+     * @see IndexPattern#SETTING_MAPPING_RESOURCES 该模式下创建索引的方式
+     * @param entityParse entityParse
+     */
+    void settingAndMappingCreateIndex(EntityParse entityParse);
 
-    void settingAndMappingCreateIndex(EntityParse entityParse) throws IOException;
+    /**
+     * 创建索引库
+     * @see IndexPattern#SETTING_RESOURCE 该模式下创建索引的方式
+     * @param entityParse entityParse
+     */
+    void settingCreateIndex(EntityParse entityParse);
 
-    void settingCreateIndex(EntityParse entityParse) throws IOException;
+    /**
+     * 创建索引库
+     * @see IndexPattern#MAPPING_RESOURCE 该模式下创建索引的方式
+     * @param entityParse entityParse
+     */
+    void mappingCreateIndex(EntityParse entityParse);
 
-    void mappingCreateIndex(EntityParse entityParse) throws IOException;
-
-    void indexResourceCreateIndex(EntityParse entityParse) throws IOException;
+    /**
+     * 创建索引库
+     * @see IndexPattern#INDEX_SOURCE 该模式下创建索引的方式
+     * @param entityParse entityParse
+     */
+    void indexResourceCreateIndex(EntityParse entityParse);
 
 }

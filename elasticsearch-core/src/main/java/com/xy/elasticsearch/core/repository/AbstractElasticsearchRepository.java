@@ -5,7 +5,6 @@ import com.xy.elasticsearch.core.exception.ElasticsearchException;
 import com.xy.elasticsearch.core.factory.AbstractIndexFactory;
 import com.xy.elasticsearch.core.factory.EntityParse;
 import com.xy.elasticsearch.core.parse.EntityIndexParse;
-import com.xy.elasticsearch.core.parse.IndexPattern;
 import com.xy.elasticsearch.core.parse.endurance.IndexEndurance;
 import com.xy.elasticsearch.core.utils.MapUtils;
 import com.xy.elasticsearch.core.utils.ValidateUtils;
@@ -333,9 +332,7 @@ public class AbstractElasticsearchRepository<T> extends AbstractIndexFactory imp
     }
 
 
-    /**
-     * @see IndexPattern#INDEX_FIELD_SET_UP 该模式下创建索引的方式
-     */
+
     @Override
     public void pathCreateIndex(EntityParse entityParse) {
         try {
@@ -357,9 +354,7 @@ public class AbstractElasticsearchRepository<T> extends AbstractIndexFactory imp
     }
 
 
-    /**
-     * @see IndexPattern#SETTING_MAPPING_RESOURCES 该模式下创建索引的方式
-     */
+
     @Override
     public void settingAndMappingCreateIndex(EntityParse entityParse) {
         try {
@@ -390,9 +385,7 @@ public class AbstractElasticsearchRepository<T> extends AbstractIndexFactory imp
     }
 
 
-    /**
-     * @see IndexPattern#SETTING_RESOURCE 该模式下创建索引的方式
-     */
+
     @Override
     public void settingCreateIndex(EntityParse entityParse) {
         try {
@@ -416,9 +409,6 @@ public class AbstractElasticsearchRepository<T> extends AbstractIndexFactory imp
     }
 
 
-    /**
-     * @see IndexPattern#MAPPING_RESOURCE 该模式下创建索引的方式
-     */
     @Override
     public void mappingCreateIndex(EntityParse entityParse) {
         try {
@@ -439,9 +429,6 @@ public class AbstractElasticsearchRepository<T> extends AbstractIndexFactory imp
         }
     }
 
-    /**
-     * @see IndexPattern#INDEX_SOURCE 该模式下创建索引的方式
-     */
     @Override
     public void indexResourceCreateIndex(EntityParse entityParse) {
         try {
